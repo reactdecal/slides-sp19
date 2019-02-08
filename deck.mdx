@@ -1,23 +1,216 @@
-import { Head } from 'mdx-deck'
-
-export { default as theme } from './theme'
+import { Head, Appear } from "mdx-deck";
+import { instructor, instructor_image, ta, ta_image } from "./styles";
+import Instructor from "./components/instructor";
+import { TA } from "./components/ta";
+import Logo from "./rdc-icon.svg";
+export { default as theme } from "./theme";
 
 <Head>
-  <title>Presentation Title</title>
+  <title>React DeCal Week 1</title>
 </Head>
 
-# Hello
+<Logo />
+
+# Welcome to the React DeCal!
+
+Spring 2019 :sparkles:
 
 ---
 
-## Edit this file
+## Agenda
 
-To create your presentation
+<ul style={{ textAlign: "left" }}>
+  <Appear>
+    <li> Meet the Team!</li>
+    <li> Course Logistics </li>
+    <li> Thoughts on Software Engineering</li>
+    <li> What is React?</li>
+    <li> What's next?</li>
+  </Appear>
+</ul>
+
+---
+
+# Instructors
+
+<div style={{ display: "flex", justifyContent: "center" }}>
+  <Instructor name="Ethan Lee" size="200" image="ethan.png" />
+  <Instructor name="Aivant Goyal" size="200" image="aivant.png" />
+</div>
+
+---
+
+# Our Wonderful TAs!
+
+<div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}} >
+
+  <TA name="Zachary Kirby" size="175" image="kirby.png"/>
+  <TA name="Selina Feng" size="175" image="selina.jpeg"/>
+  <TA name="Wilson Wang" size="175" image="wilson.png"/>
+  <TA name="Adhiv Dhar" size="175" image="adhiv.jpg"/>
+
+</div>
+
+---
+
+# More TAs!
+
+<div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}} >
+  
+  <TA name="Amitav Baruah" size="175" image="amitav.png"/>
+  <TA name="Alejandro Garcia Salas" size="175" image="alejandro.jpeg"/>
+  <TA name="Isabelle Zhou" size="175" image="isabelle.png"/>
+  <TA name="Linus Lee" size="175" image="linus.jpeg"/>
+
+</div>
+
+---
+
+# Even <i>More</i> TAs!
+
+<div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}} >
+  
+  <TA name="Brenda Zhang" size="175" image="brenda.jpeg"/>
+  <TA name="Trevor Aquino" size="175" image="trevor.jpg"/>
+  <TA name="Arpan Pal" size="175" image="arpan.png"/>
+
+</div>
+
+---
+
+## Course Logistics
+
+<ul style={{ textAlign: "left" }}>
+  <Appear>
+    <li>Lectures: Barrows 20 Thurs 6-7PM</li>
+    <li>Labs: Barrows 20 Tuesday 6-7PM</li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      Labs are long but important!
+    </li>
+    <li>Weekly Attendance: 12 Weeks Total (20% of grade)</li>
+    <li style={{ marginLeft: "2em" }}>0-2 unexcused = 20/20</li>
+    <li style={{ marginLeft: "2em" }}>3-4 unexcused = 10/20</li>
+    <li style={{ marginLeft: "2em" }}>5-6 unexcused = 0/20</li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      7+ unexcused = Automatic NP :(
+    </li>
+    <li> Pre-Requisites: CS61A and CS61B (Can be taken concurrently) </li>
+  </Appear>
+</ul>
 
 ```notes
-- Create speaker notes in fenced code blocks
+Labs will cover content from the week before, and they will often be longer than you can finish in class. You are expected to finish them on your own time!
+
+Let us know in advance if you need to leave early! Do so quietly and it's your responsibility to look up slides and catch up on material!
+
+12 Weeks total of lecture. Final week is project presentations!
+
+If you don't have the course prerequisites, the material will likely be very very difficult! And it'll be difficult for us to support you. We strongly recommend you take it another semester!
 ```
 
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+## Assignments
+
+You can't learn CS without actually writing code!
+
+<ul style={{ textAlign: "left" }}>
+  <Appear>
+    <li> Weekly(ish) Homework Assignments</li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      {" "}
+      Designed to be useful not stressful!
+    </li>
+    <li> Finishing Labs is not required but important! </li>
+    <li> 2 Units P/NP: 70% is passing</li>
+    <li> Grade Breakdown:</li>
+    <li style={{ marginLeft: "2em" }}>20% Attendance</li>
+    <li style={{ marginLeft: "2em" }}>25% Homework</li>
+    <li style={{ marginLeft: "2em" }}>25% Project 1 (Semi-Guided)</li>
+    <li style={{ marginLeft: "2em" }}>
+      30% Final Project (Open-Ended + Group, Required to Pass!)
+    </li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>15% EPA Points!</li>
+  </Appear>
+</ul>
+
+---
+
+## Course Resources
+
+Our main goal is to make sure you gain as much knowledge as you can!
+
+<div style={{ textAlign: "left" }}>
+  <Appear style={{ textAlign: "left" }}>
+    <p>
+      Course Portal: portal.reactdecal.org (You'll receive a link this weekend!)
+    </p>
+    <p>Course Forum: talk.reactdecal.org</p>
+    <p>Slides and Notes: slides.reactdecal.org</p>
+    <p>Weekly Office Hours — A lot of them</p>
+  </Appear>
+</div>
+
+---
+
+## Learning Space
+
+We want this classroom to be exciting. Help us!
+
+<ul style={{ textAlign: "left" }}>
+  <Appear>
+    <li> Lab Groups</li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      New best friends: assigned next Tuesday
+    </li>
+    <li> Come to Office Hours! </li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      It'll make our day
+    </li>
+    <li> Get to know eachother and help eachother out </li>
+    <li> Please don't fall asleep! Smile!</li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      {" "}
+      It's really hard to teach to a sea of sleepy faces{" "}
+    </li>
+    <li>React Decal Official Playlist!</li>
+    <li style={{ marginLeft: "2em", paddingBottom: "0" }}>
+      {" "}
+      playlist.reactdecal.org{" "}
+    </li>
+  </Appear>
+</ul>
+
+---
+
+# Learning How to Be Confused
+
+Welcome to Software Engineering!
+
+---
+
+## Why this isn't a regular CS Class
+
+- Learning vs. Applying CS Fundamentals
+- Millions of applications: a whole world of unknowns
+- This is a Decal 😅
+
+---
+
+## The life of a Software Engineer
+
+![](https://media.giphy.com/media/N1pS8hY0Fh4ic/giphy.gif)
+
+- Debugging is unpredictable
+- Tools are complex and imperfect
+
+---
+
+## The good news?
+
+- SWE Community is super collaborative
+-
+
+---
+
+# Why are you here?

@@ -13,7 +13,13 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
-    "mdx-deck": "^1.6.7"
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "mdx-deck": "reactdecal/mdx-deck#fix-classnames",
+    "react-svg-loader": "^2.1.0"
   },
-  "name": "test-mdx"
+  "name": "test-mdx",
+  "dependencies": {
+    "react-helmet": "^5.2.0"
+  }
 }
