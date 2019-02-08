@@ -21,5 +21,8 @@
   "name": "test-mdx",
   "dependencies": {
     "react-helmet": "^5.2.0"
+  },
+  "engines": {
+    "node": ">= 10.15"
   }
 }
