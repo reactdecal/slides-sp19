@@ -20,6 +20,7 @@
   },
   "name": "test-mdx",
   "dependencies": {
+    "react": "^16.8.1",
     "react-helmet": "^5.2.0"
   },
   "engines": {
