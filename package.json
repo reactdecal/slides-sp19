@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Deck created with mdx-deck",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck2.mdx",
+    "start": "mdx-deck deck3.mdx",
+    "build": "mdx-deck build deck3.mdx",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
     "help": "mdx-deck"
