@@ -13,3 +13,5 @@ for i in *.mdx; do
 done
 
 cd ..
+
+x0 build ./notes/lecture1-notes.mdx -d ./public
