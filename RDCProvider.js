@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Logo from "./assets/images/logos/rdc-icon.svg";
-import Flower from "./flower.svg";
+import Flower from "./assets/images/logos/flower.svg";
 
 const RDCProvider = ({ children, ...props }) => (
   <div

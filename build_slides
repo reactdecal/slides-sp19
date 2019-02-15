@@ -1,0 +1,15 @@
+#!/bin/bash
+rm -R ./public
+mkdir ./public
+cp -R ./assets ./public/assets
+cd ./decks
+
+for i in *.mdx; do
+    [ -f "$i" ] || break
+    name=${i%.*}
+    echo "Processing $i"
+    mkdir ../public/$name
+    npx mdx-deck build $i -d ../public/$name
+done
+
+cd ..
