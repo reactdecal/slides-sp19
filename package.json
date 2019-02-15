@@ -20,11 +20,8 @@
   },
   "name": "test-mdx",
   "dependencies": {
-    "mdx-deck-code-surfer": "^0.5.5",
-    "raw-loader": "^1.0.0",
     "react": "^16.8.1",
-    "react-helmet": "^5.2.0",
-    "react-syntax-highlighter": "^10.1.2"
+    "react-helmet": "^5.2.0"
   },
   "engines": {
     "node": ">= 10.15"

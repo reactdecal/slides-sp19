@@ -1,5 +1,6 @@
 import React from 'React';
-import {instructor, instructor_image} from '../styles'
+const instructor = {display: "flex", flexDirection: "column", height: "100px", alignItems: "center", margin: '0px 20px 0px 20px'}
+const instructor_image = {borderRadius: '100%', margin: '20px 20px 0px 20px'}
 
 export default class Instructor extends React.Component {
 
