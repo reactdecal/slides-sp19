@@ -1,0 +1,96 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./logo-heart.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+
+<Logo />
+
+# Happy Valentine's Day
+
+Remember to sit with your lab group!
+
+---
+
+# What's in a website?
+
+- HTML and CSS (_you've done this!_)
+- JavaScript
+
+```notes
+Every website you've ever visited has sent your browser (Google Chrome/Firefox/etc.)
+a bundle of HTML, CSS, and JavaScript.
+
+HTML and CSS are not considered "programming languages" proper.
+
+HTML is a _markup language_, or a way of describing a hierarchical structure
+of information. You can use HTML to tell the browser what the actual content of
+your page is.
+
+CSS is a standard way of specifying declarations to change the appearance of
+those HTML elements. You can use CSS to tell the browser how something should
+appear on a page.
+
+JavaScript is the programming language of the Web. All modern browsers are expected
+to understand and interpret JavaScript in much the same way, and we can use
+JavaScript to perform programming tasks. This is also how we can define dynamic
+behavior on your website.
+```
+
+---
+
+# JavaScript
+
+Most of this course will focus on the use of JavaScript.
+
+```javascript
+function sayHello(name) {
+  return "Hello, " + name + "!";
+}
+```
+
+---
+
+# Interacting with HTML in JavaScript: Demo
+
+---
+
+# Interacting with HTML in JavaScript: Recap
+
+```javascript
+// First, let's find some element
+let paragraph = document.querySelector("p");
+```
+
+---
+
+# Interacting with HTML in JavaScript: Recap
+
+```javascript
+// Next, we can read and modify the element's properties
+console.log(paragraph.innerText);
+paragraph.innerText = "Hello, world!";
+```
+
+---
+
+# Interacting with HTML in JavaScript: Recap
+
+```javascript
+// Any property we can set on HTML: we can set with JS
+paragraph.style.color = "red";
+```
+
+---
+
+# Interacting with HTML in JavaScript: Recap
+
+```javascript
+// We can also create elements with JS!
+let newParagraph = document.createElement("p");
+newParagraph.innerText = "Hello world, part 2";
+document.body.appendChild(newParagraph);
+```
+
+---
+
+# Debugging Demo

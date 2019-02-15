@@ -30,7 +30,7 @@ const RDCProvider = ({ children, ...props }) => (
         fontWeight: 400
       }}
     >
-      Lecture 1: Welcome to the React DeCal
+      Lecture 2: How websites are made
     </h1>
 
     <Flower

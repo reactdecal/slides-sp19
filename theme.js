@@ -1,5 +1,6 @@
 import theme from "mdx-deck/themes";
 import Provider from "./RDCProvider";
+import okaidia from "react-syntax-highlighter/styles/prism/okaidia";
 
 export default {
   ...theme,
@@ -8,8 +9,17 @@ export default {
     ...theme.colors,
     background: "rgba(0, 0, 0, 0)"
   },
+  prism: {
+    style: okaidia
+  },
   css: {
     ...theme.css,
+    body: {
+      maxWidth: "100vw",
+      maxHeight: "100vh",
+      overflowX: "hidden",
+      overflowY: "hidden"
+    },
     "& .Slide > div": {
       height: "80vh",
       width: "90vw",
