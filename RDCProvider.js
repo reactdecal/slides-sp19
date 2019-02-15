@@ -30,7 +30,7 @@ const RDCProvider = ({ children, ...props }) => (
         fontWeight: 400
       }}
     >
-      Lecture 1: Welcome to the React DeCal
+      Lab 1: Getting to know your Lab Groups!
     </h1>
 
     <Flower
