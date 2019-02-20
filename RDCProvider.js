@@ -30,7 +30,7 @@ const RDCProvider = ({ children, ...props }) => (
         fontWeight: 400
       }}
     >
-      Lecture 2: How websites are made
+      Lab 2: Look Ma, No H(tml)and(CS)s!
     </h1>
 
     <Flower
