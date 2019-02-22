@@ -1,5 +1,6 @@
 import theme from "mdx-deck/themes";
 import Provider from "./RDCProvider";
+import { okaidia } from "react-syntax-highlighter/dist/styles/prism";
 
 export default {
   ...theme,
@@ -7,6 +8,15 @@ export default {
   colors: {
     ...theme.colors,
     background: "rgba(0, 0, 0, 0)"
+  },
+  heading: {
+    margin: "1rem 0"
+  },
+  paragraph: {
+    margin: "0 0 1rem 0"
+  },
+  prism: {
+    style: okaidia
   },
   css: {
     ...theme.css,
@@ -16,18 +26,32 @@ export default {
       overflowX: "hidden",
       overflowY: "hidden"
     },
+    li: {
+      textAlign: "left"
+    },
     "& .Slide > div": {
-      height: "80vh",
+      height: "90vh",
       width: "90vw",
-      // display: "flex",
-      // flexDirection: "column",
-      // alignItems: "center",
       padding: "5%",
       border: "10px solid black",
       borderRadius: "20px",
       backgroundColor: "white",
       boxShadow: "10px 10px 0px rgba(0, 0, 0, 0.166)",
-      overflowY: "scroll"
+      overflowY: "scroll",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    ".codesurfer": {
+      maxHeight: "100%"
+    },
+    ".codesurfer > div": {
+      height: "100% !important",
+      width: "100% !important"
+    },
+    ".codesurfer > div > div": {
+      height: "100% !important"
     }
   },
   Provider

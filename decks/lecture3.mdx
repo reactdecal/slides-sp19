@@ -1,0 +1,177 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "../assets/images/logos/rdc-icon.svg";
+export { default as theme } from "../theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Logo />
+
+# Welcome back
+
+Remember to sit with your lab groups!
+
+---
+
+# JavaScript functions
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+```
+
+Defining a new function, with `function`
+
+---
+
+# JavaScript functions
+
+```javascript
+function doTwice(func, input) {
+  func(func(input));
+}
+```
+
+Taking a function as an argument
+
+---
+
+<div className="codesurfer">
+  <CodeSurfer
+    title="Passing a function as an argument"
+    theme={ultramin}
+    code={require("!raw-loader!../assets/code/funcs.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "" },
+      {
+        tokens: {
+          1: [4],
+          2: [3, 5],
+          5: [3, 4, 5, 6, 7, 8],
+          7: [1]
+        },
+        lines: [6],
+        notes: "func defined as an anonymous function"
+      },
+      {
+        tokens: {
+          1: [6],
+          7: [3, 4]
+        },
+        notes: "input passed as Hello world"
+      },
+      { notes: "Result: Demo" }
+    ]}
+  />
+</div>
+
+---
+
+# How JavaScript runs
+
+Dealing with a chaos of inputs and outputs and staying efficient
+
+<iframe src="https://giphy.com/embed/HSxKYjDLc9A6A" height="500" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/HSxKYjDLc9A6A"></a></p>
+
+---
+
+# JavaScript doesn't sleep
+
+```javascript
+setTimeout(function() {
+  console.log("This will print after 5 seconds");
+}, 5000);
+
+console.log("But it won't wait for me!");
+```
+
+Function calls are processed like a queue!
+
+---
+
+# Events
+
+Using JavaScript to make our website interactive
+
+---
+
+# Events
+
+If _this event happens_, then _do something_
+
+```javascript
+let btn = document.querySelector("button");
+btn.addEventListener("<this event happens>", function(event) {
+  // Do something
+});
+```
+
+---
+
+<div className="codesurfer">
+  <CodeSurfer
+    title="Events"
+    theme={ultramin}
+    code={require("!raw-loader!../assets/code/events.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "If a click happens, then say hello" },
+      { lines: [1], notes: "Select the first <button> element" },
+      {
+        tokens: {
+          2: [4]
+        },
+        notes: "Specify the event name"
+      },
+      {
+        tokens: {
+          2: [7, 8, 9, 10, 12]
+        },
+        lines: [3, 4],
+        notes: "Specify what should happen when the event fires"
+      }
+    ]}
+  />
+</div>
+
+---
+
+# What kinds of events can we listen for?
+
+<ul>
+  <Appear>
+    <li>click</li>
+    <li>mousedown, mouseup, mousemove</li>
+    <li>input</li>
+    <li>keydown, keyup</li>
+    <li>touchstart, touchend, touchmove</li>
+  </Appear>
+</ul>
+
+---
+
+# Codealong!
+
+https://tiny.cc/reactcookie
+
+---
+
+# The Event Object
+
+```javascript
+let btn = document.querySelector("button");
+btn.addEventListener("click", function(event) {
+  // What is `event`?
+});
+```
+
+---
+
+# Codealong!
+
+https://tiny.cc/reactgreeter

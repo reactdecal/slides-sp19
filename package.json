@@ -17,6 +17,9 @@
     "@babel/core": "^7.2.2",
     "babel-loader": "^8.0.5",
     "mdx-deck": "reactdecal/mdx-deck#fix-classnames",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "prism-react-renderer": "^0.1.5",
+    "raw-loader": "^1.0.0",
     "react-svg-loader": "^2.1.0"
   },
   "name": "test-mdx",

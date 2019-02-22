@@ -9,7 +9,7 @@ for i in *.mdx; do
     name=${i%.*}
     echo "Processing $i"
     mkdir ../public/$name
-    npx mdx-deck build $i -d ../public/$name
+    npx mdx-deck build --no-html $i -d ../public/$name
 done
 
 cd ..
