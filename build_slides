@@ -12,6 +12,6 @@ for i in *.mdx; do
     npx mdx-deck build --no-html $i -d ./public/$name
 done
 
-cd ..
+# cd ..
 
-x0 build ./notes/lecture1-notes.mdx -d ./public
+# x0 build ./notes/lecture1-notes.mdx -d ./public
