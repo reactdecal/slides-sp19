@@ -2,14 +2,14 @@
 rm -R ./public
 mkdir ./public
 cp -R ./assets ./public/assets
-cd ./decks
+# cd ./decks
 
 for i in *.mdx; do
     [ -f "$i" ] || break
     name=${i%.*}
     echo "Processing $i"
-    mkdir ../public/$name
-    npx mdx-deck build --no-html $i -d ../public/$name
+    mkdir ./public/$name
+    npx mdx-deck build --no-html $i -d ./public/$name
 done
 
 cd ..

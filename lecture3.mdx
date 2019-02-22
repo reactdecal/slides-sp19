@@ -1,6 +1,6 @@
 import { Head, Appear } from "mdx-deck";
-import Logo from "../assets/images/logos/rdc-icon.svg";
-export { default as theme } from "../theme";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
 import { CodeSurfer } from "mdx-deck-code-surfer";
 import ultramin from "prism-react-renderer/themes/ultramin";
 
@@ -40,7 +40,7 @@ Taking a function as an argument
   <CodeSurfer
     title="Passing a function as an argument"
     theme={ultramin}
-    code={require("!raw-loader!../assets/code/funcs.js")}
+    code={require("!raw-loader!./assets/code/funcs.js")}
     lang="javascript"
     showNumbers={false}
     dark={false}
@@ -115,7 +115,7 @@ btn.addEventListener("<this event happens>", function(event) {
   <CodeSurfer
     title="Events"
     theme={ultramin}
-    code={require("!raw-loader!../assets/code/events.js")}
+    code={require("!raw-loader!./assets/code/events.js")}
     lang="javascript"
     showNumbers={false}
     dark={false}

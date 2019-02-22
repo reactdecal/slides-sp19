@@ -1,6 +1,6 @@
 import theme from "mdx-deck/themes";
 import Provider from "./RDCProvider";
-import { okaidia } from "react-syntax-highlighter/dist/styles/prism";
+import okaidia from "react-syntax-highlighter/styles/prism/okaidia";
 
 export default {
   ...theme,
