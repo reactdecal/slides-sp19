@@ -1,4 +1,3 @@
-import React from 'React';
 const instructor = {display: "flex", flexDirection: "column", height: "100px", alignItems: "center", margin: '0px 20px 0px 20px'}
 const instructor_image = {borderRadius: '100%', margin: '20px 20px 0px 20px'}
 
