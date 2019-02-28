@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Deck created with mdx-deck",
   "scripts": {
-    "start": "mdx-deck ./decks/lecture1.mdx",
+    "start": "mdx-deck ./lecture4.mdx",
     "build": "./build_slides",
     "deploy": "surge ./public slides.reactdecal.org",
     "pdf": "mdx-deck pdf deck.mdx",

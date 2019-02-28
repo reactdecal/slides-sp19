@@ -4,7 +4,7 @@ mkdir ./public
 cp -R ./assets ./public/assets
 # cd ./decks
 
-for i in *.mdx; do
+for i in lecture4.mdx; do
     [ -f "$i" ] || break
     name=${i%.*}
     echo "Processing $i"

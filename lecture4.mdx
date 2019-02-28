@@ -1,0 +1,137 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Logo />
+
+# Happy Thursday!
+
+✨ Time to finally learn about React ✨
+
+---
+
+# Javascript Functions
+
+```javascript 
+function add(a, b) { 
+    return a + b
+} 
+const add = function(a, b) { return a + b } // Anonymous Function
+const add = (a, b) => { return a + b }  // ES6 (new) Syntax
+```
+
+Three different ways of making a function!
+
+---
+
+# Higher-Order Function
+
+```javascript 
+//TODO: Find a good practical example
+```
+
+We can define functions inside of functions! No need for classes :)
+
+---
+
+# JavaScript Objects
+
+```javascript
+let a = {hello: 5, world: "hello there"}
+a['hello'] // == 5
+a.world // == "hello there"
+a.instructors = ["Ethan", "Aivant"]
+```
+
+A set of key-value pairs where the keys are strings and values can be _anything_
+
+---
+
+# Functions as Object Values
+
+```javascript
+let calculator = {
+    double: (x) => {return 2 * x}, 
+    add: (x, y) => {return x + y}}
+calculator.double(5) // == 10
+calculator.subtract = function(x, y) { return x - y }
+```
+
+The values of an object can also be functions!
+
+---
+
+# Array.map
+
+```javascript 
+let numbers = [1, 2, 3, 4, 5]
+let doubled = numbers.map((x) => {return 2 * x}) 
+console.log(doubled) // [2, 4, 6, 8, 10]
+console.log(numbers) // [1, 2, 3, 4, 5]
+```
+
+Array.map transforms an array of one thing into an array of another
+
+---
+
+# Array.filter
+
+```javascript 
+let numbers = [1, 2, 3, 4, 5]
+even = numbers.filter((x) => {return x%2 == 0})
+console.log(even) // [2, 4]
+console.log(numbers) // [1, 2, 3, 4, 5]
+```
+
+Array.filter removes elements from an array that don't fit a condition
+
+---
+
+# What is React?
+
+React is a JS Library that lets us modularize our app via reusable components made up of HTML and JS working together.
+
+---
+
+# Demo 
+
+Best seen through a demo! Code will be available afterwards
+
+---
+
+# Review 
+
+<div className="codesurfer">
+  <CodeSurfer
+    title="Passing a function as an argument"
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/react_component.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "A React Component is just a function that takes in properties and returns JSX" },
+      /*{ {
+        tokens: {
+          1: [4],
+          2: [3, 5],
+          5: [3, 4, 5, 6, 7, 8],
+          7: [1]
+        },
+        lines: [6],
+        notes: "func defined as an anonymous function"
+      },
+      {
+        tokens: {
+          1: [6],
+          7: [3, 4]
+        },
+        notes: "input passed as Hello world"
+      },
+      { notes: "Result: Demo" } }*/
+    ]}
+  />
+</div>
+
