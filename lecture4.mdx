@@ -30,7 +30,7 @@ Three different ways of making a function!
 
 ```javascript 
 const double = (x) => { return 2*x }  // Most verbose
-const double = (x) => { 2*x } // No return statement needed!
+const double = (x) => (2*x) // No return statement needed!
 const double = x => 2*x // No {} or () needed
 ```
 1) one statement functions don't need `return` or {}
@@ -56,8 +56,9 @@ A set of key-value pairs where the keys are strings and values can be _anything_
 
 ```javascript
 let calculator = {
-    double: (x) => {return 2 * x}, 
-    add: (x, y) => {return x + y}}
+    double: x => 2 * x, 
+    add: (x, y) => x + y 
+}
 calculator.double(5) // == 10
 calculator.subtract = function(x, y) { return x - y }
 ```
@@ -70,7 +71,7 @@ The values of an object can also be functions!
 
 ```javascript 
 let numbers = [1, 2, 3, 4, 5]
-let doubled = numbers.map((x) => {return 2 * x}) 
+let doubled = numbers.map(x => 2 * x) 
 console.log(doubled) // [2, 4, 6, 8, 10]
 console.log(numbers) // [1, 2, 3, 4, 5]
 ```
@@ -81,7 +82,7 @@ Array.map transforms an array of one thing into an array of another
 
 # What is React?
 
-React is a JS Library that lets us modularize our app via reusable components made up of HTML and JS working together.
+React is a JS Library that lets us modularize our app via reusable components
 
 ---
 
@@ -118,7 +119,13 @@ Best seen through a demo! Code will be available afterwards
       { notes: "" },
       {
         lines: [3, 4, 5, 6],
-        notes: "This is JSX, HTML in Javascript!"
+        notes: "This is how we describe how our view will look using JSX. It's not HTML!"
+      },
+      {
+        tokens: {
+          4: [5, 6, 7, 8, 9],
+        },
+        notes: "We can execute javascript in JSX using {} to help us render the component"
       },
       {
         tokens: {
@@ -127,10 +134,8 @@ Best seen through a demo! Code will be available afterwards
         notes: "'props' is an object given to the component by it's parent as a function argument"
       },
       {
-        tokens: {
-          4: [5, 6, 7, 8, 9],
-        },
-        notes: "We can access our variables in JSX using {} to help us render the component"
+        lines: [9],
+        notes: "Props get passed in when the component is created"
       }
     ]}
   />
@@ -192,6 +197,11 @@ Best seen through a demo! Code will be available afterwards
       },
       { notes: "Second, tell React which component to render in that element", 
         lines: [2]
+      },
+      { notes: "React will take this Component and call the function we defined!", 
+        tokens: { 
+            2: [4, 5, 6, 7]
+        }
       }
     ]}
   />

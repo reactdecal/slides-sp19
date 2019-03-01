@@ -6,3 +6,4 @@ const Greeting = (props) => {
         </div>
     );
 }
+<Greeting name="Aivant"/>
