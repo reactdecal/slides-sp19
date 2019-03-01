@@ -15,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@compositor/x0": "^6.0.7",
     "babel-loader": "^8.0.5",
     "mdx-deck": "reactdecal/mdx-deck#fix-classnames",
     "mdx-deck-code-surfer": "^0.5.5",
@@ -24,6 +25,7 @@
   },
   "name": "test-mdx",
   "dependencies": {
+    "code-surfer": "^0.5.5",
     "react": "^16.8.1",
     "react-helmet": "^5.2.0"
   },
