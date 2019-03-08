@@ -112,3 +112,42 @@ Today: Reviewing and building on React
     ]}
   />
 </div>
+
+---
+
+**Component as a function**
+
+```jsx
+function HelloWorld(props) {
+  return <p>Hello world!</p>;
+}
+```
+
+---
+
+**Component as a class**
+
+```jsx
+class HelloWorld extends React.Component {
+  render() {
+    return <p>Hello world!</p>;
+  }
+}
+```
+
+---
+
+### Using functions in the class
+
+```jsx
+class Greeting extends React.Component {
+  askForName() {
+    return prompt("What's your name?");
+  }
+
+  render() {
+    const name = this.askForName();
+    return <p>Hello, {name}!</p>;
+  }
+}
+```
