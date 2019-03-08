@@ -1,0 +1,114 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Logo />
+
+# Happy Thursday!
+
+Today: Reviewing and building on React
+
+---
+
+# Review
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/react_component.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "" },
+      {
+        lines: [3, 4, 5, 6],
+        notes:
+          "This is how we describe how our view will look using JSX. It's not HTML!"
+      },
+      {
+        tokens: {
+          4: [5, 6, 7, 8, 9]
+        },
+        notes:
+          "We can execute javascript in JSX using {} to help us render the component"
+      },
+      {
+        tokens: {
+          1: [6, 7, 8]
+        },
+        notes:
+          "'props' is an object given to the component by it's parent as a function argument"
+      },
+      {
+        lines: [9],
+        notes: "Props get passed in when the component is created"
+      }
+    ]}
+  />
+</div>
+
+---
+
+# More Review
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/react_component_2.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "" },
+      {
+        notes:
+          "We can transform an array of strings into an array of JSX elements using Array.map",
+        lines: [3, 4, 5]
+      },
+      {
+        notes:
+          "This anonymous function takes in a name and returns JSX representing our Greeting component",
+        lines: [4, 5],
+        tokens: {
+          3: [8, 9, 10, 11, 12, 13, 14]
+        }
+      },
+      {
+        notes:
+          "This is how we pass props into a component. React will turn this into an object for us",
+        lines: [4]
+      },
+      {
+        notes: "We can then add this array of JSX elements into our component!",
+        lines: [9]
+      }
+    ]}
+  />
+</div>
+
+---
+
+# A review of Lab
+
+---
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/lab_icon_component.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "A review of the Icon component" },
+      { notes: "What kind of props does this Icon component need?" },
+      { notes: "Just one: the type prop!", tokens: { 10: [7, 8, 9] } },
+      { notes: "What does the type prop do? What are valid values for type?" },
+      { notes: "'rt', 'like', and 'verified'!", lines: [4, 5, 6, 10] },
+      { notes: "How do we pass this in?" }
+    ]}
+  />
+</div>
