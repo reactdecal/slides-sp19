@@ -1,0 +1,63 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Head>
+  <title>React DeCal Lecture 6</title>
+</Head>
+
+<Logo />
+
+# Welcome to Lecture 6
+
+### A STATE of Confusion
+
+---
+
+# Attendance
+
+http://bit.ly/RDAttendance
+
+---
+
+<div className="codesurfer">
+  <CodeSurfer
+    title="A Simple Counter"
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/counter_example.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "Today's Goal: Make this counter work!" },
+      { lines: [4, 6], notes: "These two buttons will increment and decrement the counter"},
+      { lines: [5], notes: "This is the part we need to update" },
+      { notes: "What do we need to change to make this work?" }
+    ]}
+  />
+</div>
+
+---
+
+# State Demo!
+
+---
+
+# State Review
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/state_example1.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "this.setState" },
+    ]}
+  />
+</div>
+
+
