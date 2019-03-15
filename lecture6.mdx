@@ -1,4 +1,4 @@
-import { Head, Appear } from "mdx-deck";
+import { Head, Appear, Image } from "mdx-deck";
 import Logo from "./assets/images/logos/rdc-icon.svg";
 export { default as theme } from "./theme";
 import { CodeSurfer } from "mdx-deck-code-surfer";
@@ -12,32 +12,33 @@ import ultramin from "prism-react-renderer/themes/ultramin";
 
 # Welcome to Lecture 6
 
-### A STATE of Confusion
+### ~A STATE of Confusion~
+
+---
+
+# React Greeter
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/state_motivator.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "How can we use the user's input to greet them?" },
+      { notes: "How can `onChange` update the value of `name`", 
+        lines: [3, 8]
+      }
+    ]}
+  />
+</div>
 
 ---
 
 # Attendance
 
 http://bit.ly/RDAttendance
-
----
-
-<div className="codesurfer">
-  <CodeSurfer
-    title="A Simple Counter"
-    theme={ultramin}
-    code={require("!raw-loader!./assets/code/counter_example.js")}
-    lang="javascript"
-    showNumbers={false}
-    dark={false}
-    steps={[
-      { notes: "Today's Goal: Make this counter work!" },
-      { lines: [4, 6], notes: "These two buttons will increment and decrement the counter"},
-      { lines: [5], notes: "This is the part we need to update" },
-      { notes: "What do we need to change to make this work?" }
-    ]}
-  />
-</div>
 
 ---
 
@@ -50,14 +51,43 @@ http://bit.ly/RDAttendance
 <div className="codesurfer">
   <CodeSurfer
     theme={ultramin}
-    code={require("!raw-loader!./assets/code/state_example1.js")}
+    code={require("!raw-loader!./assets/code/greeter_example.js")}
     lang="javascript"
     showNumbers={false}
     dark={false}
     steps={[
-      { notes: "this.setState" },
+      { notes: "Let's review how this works!" },
+      { notes: "When the user changes the form, call `this.setState`, React will then re-render the component!", 
+        lines: [14]
+      }, 
+      { notes: "The object we pass into `this.setState` gets COMBINED with the existing state object!", 
+        tokens: { 
+            14: [10, 11, 12, 13, 14, 15, 16, 17, 18]
+        }
+      }, 
+      { notes: "We can then access values from state to access what the user just typed. ", 
+        lines: [12, 15]
+      }, 
+      { notes: "The constructor gets called when the component gets instantiated", 
+        lines: [2, 3, 4, 5, 6, 7]
+      },
+      { notes: "The first line should always be `super(props)", 
+        lines: [3]
+      },
+      { notes: "In the constructor, we create our initial values for state.", 
+        lines: [4, 5, 6]
+      },
+      { notes: "State helps us manage the internals of each component!"}
     ]}
   />
 </div>
 
+---
 
+<Image src="https://scriptverse.academy/img/tutorials/reactjs-props-state.png" size="auto"/>
+
+---
+
+# Welcome to Lecture 6
+
+### ~~A STATE of Confusion~~

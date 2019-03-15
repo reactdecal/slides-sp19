@@ -1,8 +1,10 @@
-class Counter extends React.Component { 
-    render() { 
-        let current = this.state.count
-        return (
-            <button onClick={() => this.setState({count: current + 1})}/>
-        )
-    }
-}
+<div>
+    <h1>Hello, {this.state.currentText}</h1>
+    <div className="ui input">
+        <input
+        placeholder="Enter your name..."
+        onChange={ev => this.setState({ currentText: ev.target.value })}
+        value={this.state.currentText}
+        />
+    </div>
+</div>
