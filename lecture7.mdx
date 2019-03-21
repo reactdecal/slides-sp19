@@ -1,0 +1,148 @@
+import { Head, Appear, Image } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Head>
+  <title>React DeCal Lecture 7</title>
+</Head>
+
+<Logo />
+
+# Welcome to Lecture 7
+
+### Today will be fun!
+
+---
+
+# Agenda
+
+1. JS Tidbits
+2. Props vs. State
+3. Thinking in React
+
+---
+
+# Announcements
+
+- Grades and feedback will be out by the end of break!
+- Project 1 Part 2 Released! Get started soon :) 
+
+---
+
+# JS Tidbit 1: Template Strings 
+
+```javascript 
+let firstName = "Aivant"
+let lastName = "Goyal"
+
+// Method 1: 
+console.log("Hi my name is " + firstName + " " + lastName)
+
+// Method 2: 
+console.log(`Hi my name is ${firstName} ${lastName}`)
+```
+
+---
+
+# JS Tidbit 2: Destructuring
+
+```javascript
+const product = {name: "Apple", price: 2, limit: 10}
+
+// Normal Way:
+let name = product.name 
+let price = product.price 
+
+// Destructuring: 
+let {name, price} = product
+```
+---
+
+# JS Tidbit 2: Destructuring 
+
+```javascript 
+// props = {name: "Orange", price: 0.5}
+render() { 
+    let {name, price} = this.props
+    return (<h1>{name} is ${price})
+}
+```
+
+Super easy to get values out of an object! 
+
+---
+
+# JS Tidbit 2: Destructuring Arrays
+
+```javascript
+const person = ["Aivant", "Goyal", 19]
+
+// Normal Way:
+let firstName = person[0]
+let lastName = person[1]
+
+// Destructuring: 
+let [firstName, lastName] = person
+let [, , age] = person
+```
+ 
+Also works for arrays! 
+
+---
+
+# JS Tidbit 3: Mutability
+
+```javascript 
+let numbers = [1, 2, 3]
+// What's the difference?
+let result1 = numbers.push(4)
+let result2 = numbers.concat(4)
+```
+
+---
+
+# JS Tidbit 3: Mutability
+
+`.push()` modifies the _existing_ array 
+
+`.concat()` returns a _new_ array!
+
+
+Why is this important?
+
+---
+
+# State is Immutable!
+
+```javascript 
+// Constructor: 
+this.state = { goals: [] }
+
+// Adding a Goal (BAD)
+this.setState({goals: this.state.goals.push("New Goal!")})
+
+// Adding a Goal (GOOD)
+this.setState({goals: this.state.goals.concat("New Goal!")})
+```
+
+---
+
+# JS Tidbit 4: Spreading 
+
+```javascript
+arr1 = [1, 2, 3]
+arr2 = [...arr1] // clones arr1
+arr3 = [...arr1, 4, 5] // creates new array [1, 2, 3, 4, 5]
+
+obj1 = {a: "foo", b: "bar"}
+obj2 = {...obj1} // clones obj1
+obj3 = {...obj1, c: "world"} // clones and adds keys to obj1
+```
+
+---
+# Attendance
+
+http://bit.ly/RDAttendance
+
