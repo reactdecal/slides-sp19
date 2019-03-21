@@ -97,7 +97,7 @@ Also works for arrays!
 ```javascript 
 let numbers = [1, 2, 3]
 // What's the difference?
-let result1 = numbers.push(4)
+let result1 = numbers.push(4) 
 let result2 = numbers.concat(4)
 ```
 
@@ -123,8 +123,11 @@ this.state = { goals: [] }
 // Adding a Goal (BAD)
 this.setState({goals: this.state.goals.push("New Goal!")})
 
-// Adding a Goal (GOOD)
+// Adding a Goal (OKAY)
 this.setState({goals: this.state.goals.concat("New Goal!")})
+
+// Adding a Goal (GOOD)
+this.setState((prevState) => {goals: oldState.goals.concat("New Goal!")})
 ```
 
 ---
@@ -142,6 +145,39 @@ obj3 = {...obj1, c: "world"} // clones and adds keys to obj1
 ```
 
 ---
+
+# JS Tidbit 4: Spreading 
+
+```javascript
+let arr1 = ["Goal 1", "Goal 2"]
+
+// Old:
+let arr2 = arr1.concat("New Goal!")
+
+// New: 
+let arr3 = [...arr1, "New Goal!"]
+```
+
+---
+
+# NO MORE CODE! 
+
+## Let's Draw :) 
+
+---
+
+# Thinking in React 
+
+## Get into groups and pull out some paper!
+
+---
+
+# yellkey.com/star 
+
+<Image src="https://daveceddia.com/images/algolia-hn-search@2x.png" size="auto"/>
+
+---
+
 # Attendance
 
 http://bit.ly/RDAttendance
