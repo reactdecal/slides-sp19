@@ -1,0 +1,50 @@
+import { Head, Appear, Image } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+
+<Head>
+  <title>React DeCal Lab 8</title>
+</Head>
+
+<Logo />
+
+# Lab 8: Network Requests!
+
+Project 1 due 
+
+---
+
+### What is a network request?
+
+<Image src="https://img.webnots.com/2013/06/HTTP-Request-and-Response-Over-Web-1.png" size="auto"/>
+
+---
+
+## Making requests in JS
+
+```
+fetch("https://www.facebook.com") // returns a Promise
+await fetch("https://www.facebook.com") // returns a Response object 
+
+# Getting the text out of a response
+let res = await fetch("https://www.reactdecal.org")
+let responseText = await res.text();
+```
+
+---
+
+# Why is this useful?
+
+- We write webpages to help us display data!
+- Network requests help us ask servers for this data 
+- Tons of public, free data sources (APIs) exist on the web
+
+---
+
+# Demo
+
+---
+
+# Attendance
+
+http://bit.ly/RDAttendance
