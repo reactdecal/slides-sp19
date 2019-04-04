@@ -1,0 +1,121 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Logo />
+
+# Lecture 7
+
+Review of data fetching and component lifecycle
+
+---
+
+# Fetch
+
+Send a network request to:
+
+- Get some information from another service
+- Give some information to another service
+
+---
+
+# Fetch: Example
+
+```javascript
+let response = await fetch("https://kanye.rest");
+let responseJson = await response.json();
+```
+
+---
+
+# Fetch: Example, in React
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/fetch_in_react.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "" },
+      {
+        notes:
+          "We'll store a 'current' quote inside of state. It'll be empty at first!",
+        lines: [4, 5, 6]
+      },
+      {
+        notes:
+          "That state variable will be rendered inside of our component, here",
+        lines: [21]
+      },
+      {
+        notes: "We have a button to fetch the quote",
+        lines: [20]
+      },
+      {
+        notes: "What does this.getQuote do?",
+        lines: [20]
+      },
+      {
+        notes:
+          "Here's this.getQuote: it fetches from the Kanye West API and sets it into our state",
+        lines: [9, 10, 11, 12, 13, 14, 15]
+      },
+      {
+        notes: "This appears in our render function, from state!",
+        lines: [21]
+      },
+      {}
+    ]}
+  />
+</div>
+
+---
+
+# What about "before" the component loads?
+
+How might we load an initial quote into the page, before a user clicks "Get quote"?
+
+---
+
+# Component Lifecycle
+
+React has special method names that are called at certain points of a component's life
+
+---
+
+![](https://cdn-images-1.medium.com/max/1600/1*cPwvUhZrnB1dtZnjBEfXfA.png)
+
+### Where to load the initial quote?
+
+---
+
+# Mounting and updating
+
+- `componentDidMount`: The React component has been placed into the page
+- `componentDidUpdate`: The newest render of the React component has been placed into the page
+
+---
+
+# The initial quote
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/fetch_in_react2.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      {},
+      { notes: "This addition will load an initial quote", lines: [9, 10, 11] }
+    ]}
+  />
+</div>
+
+---
+
+# When do we update?
