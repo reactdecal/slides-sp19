@@ -119,3 +119,60 @@ React has special method names that are called at certain points of a component'
 ---
 
 # When do we update?
+
+A demo of the concepts we just reviewed
+
+---
+
+# Review
+
+We had a `PokedexEntry` component:
+
+```
+<PokedexEntry name="ditto" />
+<PokedexEntry name="abra" />
+```
+
+---
+
+# Review
+
+We had our `PokedexEntry` component receiving props from `App`'s state:
+
+```jsx
+<PokedexEntry name={this.state.currentPokemon} />
+```
+
+---
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/fetch_in_react3.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      {
+        notes:
+          "When the component first mounts, we fetch the Pokemon's info into state",
+        lines: [25, 26, 27]
+      },
+      {
+        notes:
+          "Subsequently, when the component gets a different name prop, we fetch the Pokemon's info again",
+        lines: [29, 30, 31, 32, 33]
+      },
+      {
+        notes:
+          "We only fetch again if the specific prop we use to identify Pokemon has changed",
+        lines: [30, 31, 32]
+      },
+      {
+        notes:
+          "If this condition weren't here, this would cause infinite re-renders. componentDidUpdate happens after setState calls, too!",
+        lines: [30, 31, 32]
+      }
+    ]}
+  />
+</div>
