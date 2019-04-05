@@ -7,7 +7,7 @@ class App extends React.Component {
   }
 
   async getQuote() {
-    const response = await fetch("https://kanye.rest");
+    const response = await fetch("https://api.kanye.rest");
     const responseJson = await response.json();
     this.setState({
       quote: responseJson.quote
