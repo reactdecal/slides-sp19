@@ -8,7 +8,7 @@ import ultramin from "prism-react-renderer/themes/ultramin";
 
 # Lecture 9
 
-Component hierarchy and sharing logic
+Finishing up Advanced React!
 
 ---
 
@@ -26,7 +26,10 @@ Component hierarchy and sharing logic
 
 ```jsx
 const schoolInfo = { school: "UC Berkeley", year: 1868 };
+
+// Both are equivalent!
 <School {...schoolInfo} />;
+<School school="UC Berkeley" year={1868} />
 ```
 
 ---
@@ -35,7 +38,14 @@ const schoolInfo = { school: "UC Berkeley", year: 1868 };
 
 ```jsx
 <div>{this.props.name ? <p>{this.props.name}</p> : null}</div>
+<div>{this.props.name && <p>{this.props.name}</p>}</div> // Also works
 ```
+
+---
+
+# Demo
+
+What's up with `this` anyway?
 
 ---
 
@@ -65,6 +75,18 @@ this.state.items.map(item => {
 ---
 
 # The `children` prop
+
+```jsx
+// The JSX between <SomeComponent> tags get passed in as a prop called `children`
+<SomeComponent> 
+  <Book title="Book 1" />
+  <Book title="Book 1" />
+</SomeComponent>
+```
+
+---
+
+# Find a Project Group!
 
 ---
 
