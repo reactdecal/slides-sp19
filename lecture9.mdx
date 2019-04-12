@@ -1,0 +1,73 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Logo />
+
+# Lecture 9
+
+Component hierarchy and sharing logic
+
+---
+
+# Agenda
+
+**Overall:** Things you'll run into in Project 2.
+
+- Some syntactical tricks
+- More about the `key` prop
+- More about the `children` prop
+
+---
+
+# Props Spreading
+
+```jsx
+const schoolInfo = { school: "UC Berkeley", year: 1868 };
+<School {...schoolInfo} />;
+```
+
+---
+
+# Conditional Rendering
+
+```jsx
+<div>{this.props.name ? <p>{this.props.name}</p> : null}</div>
+```
+
+---
+
+### What is `this`?
+
+```jsx
+// 1. In constructor:
+this.onChange = this.onChange.bind(this);
+// 2. In the prop:
+<input onChange={e => this.onChange(e)} />;
+// 3. In the function definition:
+onChange = e => {};
+```
+
+---
+
+### The `key` prop
+
+Helps React know what elements need to persist across list reorders
+
+```jsx
+this.state.items.map(item => {
+  return <p key={item.id}>{item.name}</p>;
+});
+```
+
+---
+
+# The `children` prop
+
+---
+
+# Attendance
+
+https://bit.ly/RDAttendance
