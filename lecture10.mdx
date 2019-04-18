@@ -1,0 +1,91 @@
+import { Head, Appear } from "mdx-deck";
+import Logo from "./assets/images/logos/rdc-icon.svg";
+export { default as theme } from "./theme";
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import ultramin from "prism-react-renderer/themes/ultramin";
+
+<Logo />
+
+# Lecture 10
+
+Ecosystem: The wide, wonderful, weird world of JavaScript
+
+---
+
+# npm
+
+- Host and tool for JavaScript packages maintained by the community
+
+[The largest package manager in the world](http://www.modulecounts.com/)
+
+---
+
+# How do we import JS into the browser?
+
+- `<script>...</script>`
+- Bower + `<script>...</script>`
+- npm + Build step
+
+---
+
+# Importing a `<script>`
+
+If you _really, really_ need jQuery:
+
+```
+<script
+  src="https://cdnjs.../3.4.0/jquery.min.js"
+>
+</script>
+```
+
+---
+
+# Bower
+
+Don't
+
+---
+
+### _npm_ + Build step
+
+- Install a package (`npm install jquery`)
+- Import it in your project JS:
+
+```
+import $ from "jquery";
+```
+
+---
+
+### npm + _Build step_
+
+- `import`s aren't widely supported in browsers (_this is changing_)
+- There are tools to convert `import`s to:
+
+<img
+  src="https://cl.ly/8c20881b0ae7/Image%2525202019-04-18%252520at%2525204.30.05%252520PM.png"
+  width="200"
+/>
+
+And that all gets stuck in a `<script>`!
+
+---
+
+---
+
+# Navigating JS packages
+
+---
+
+**Overall:** Things you'll run into in Project 2.
+
+- Some syntactical tricks
+- More about the `key` prop
+- More about the `children` prop
+
+---
+
+# Attendance
+
+https://bit.ly/RDAttendance
