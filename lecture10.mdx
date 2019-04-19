@@ -15,17 +15,79 @@ Ecosystem: The wide, wonderful, weird world of JavaScript
 # Client-Side JS vs Node
 
 - Client's Browser receives JS as part of a webpage 
-- Node is a runtime to run JS outside of a browser!
+- Node is a runtime to run JS outside of a browser
 
 ---
 
----
-
-# npm
+# What is NPM
 
 - Host and tool for JavaScript packages maintained by the community
 
 [The largest package manager in the world](http://www.modulecounts.com/)
+
+---
+
+# Basics of working with npm 
+
+```javascript
+npm init // creates a new Javascript project (package.json)
+npm install [dependency name] // installs package into your project
+npm install //  installs all dependencies of your project
+```
+
+---
+
+# package.json 
+
+<div className="codesurfer">
+  <CodeSurfer
+    theme={ultramin}
+    code={require("!raw-loader!./assets/code/package-example.js")}
+    lang="javascript"
+    showNumbers={false}
+    dark={false}
+    steps={[
+      { notes: "This file describes your javascript project" },
+      { notes: "Your project's dependencies live here!", lines:[8, 9, 10, 11, 12] },
+      { notes: "File also defines some scripts. They work like aliases for longer commands", lines:[13, 14, 15, 16, 17, 18] },
+      {}
+    ]}
+  />
+</div>
+
+---
+
+# What does it mean to install a dependency?
+
+- `package.json` _describes_ your project's dependencies
+- `npm install` looks them up, and downloads them locally!
+
+Generated Files: 
+- `node_modules` is the folder where the dependencies live  
+- `package-lock.json` is a description of installed packages
+
+---
+
+# Eek
+
+<img src="https://i.imgur.com/xWCpMcK.png" />
+
+---
+
+# Other useful commands
+
+```javascript
+npm run [script name] // runs script from package.json
+npm start // runs the "start" script from package.json
+npm install [dep name] [dep name2] //  installs multiple dependencies at once!
+```
+
+---
+
+# Why bother? 
+
+1. Great ecosystem of build tools 
+2. Easy package management! 
 
 ---
 
